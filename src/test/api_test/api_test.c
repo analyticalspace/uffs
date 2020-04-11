@@ -653,8 +653,9 @@ int apisrv_serve(int fd, struct uffs_ApiSt *api)
 
 	ret = apisrv_read_message(fd, &msg);
 
-    if (ret == 0)
+    if (ret == 0) {
         ret = process_cmd(fd, &msg, api);
+    }
 
 	apisrv_free_message(&msg);
 

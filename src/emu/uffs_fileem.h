@@ -41,6 +41,10 @@
 
 #include "uffs/uffs_device.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define UFFS_FEMU_FILE_NAME		"uffsemfile.bin"
 
 #define UFFS_FEMU_MAX_BLOCKS	(1024 * 16)		// maximum 16K blocks
@@ -83,6 +87,11 @@ void femu_setup_wrapper_functions(uffs_Device *dev);
 int femu_InitFlash(uffs_Device *dev);
 int femu_ReleaseFlash(uffs_Device *dev);
 int femu_EraseBlock(uffs_Device *dev, u32 blockNumber);
+int uffs_emu_Defaults();
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 

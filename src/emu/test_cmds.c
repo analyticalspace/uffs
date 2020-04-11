@@ -810,7 +810,7 @@ static int cmd_TestPopulateFiles(int argc, char *argv[])
 	const char *start = "/";
 	int count = 80;
 	int i, fd, num;
-	char name[128];
+	char name[256];
 	char buf[128];
 	uffs_DIR *dirp;
 	struct uffs_dirent *ent;
